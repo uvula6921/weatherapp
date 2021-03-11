@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Map from '../views/Map.vue'
+import MapDetail from '../views/MapDetail.vue'
 
 const routes = [
   {
@@ -10,8 +11,13 @@ const routes = [
   },
   {
     path: '/map/',
-    name: 'Korean map',
+    name: 'City List',
     component: Map
+  },
+  {
+    path: '/map/:id',
+    name: 'City Detail',
+    component: MapDetail
   }
 ]
 

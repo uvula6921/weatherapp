@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : ''">
+  <div id="appp" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : ''">
     <main>
       <div class="search-box">
         <input
@@ -36,8 +36,8 @@
           </div>
         </div>
       </div>
-      <router-link :to="`/map/`" class="map-link">
-        지도로 이동
+      <router-link :to="`/map/`" class="my_list">
+        내 도시로 이동
       </router-link>
     </main>
   </div>
@@ -106,16 +106,16 @@ export default {
 body {
   font-family: 'montserrat', sans-serif;
 }
-#app {
+#appp {
   background-image: url('../assets/cold-bg.jpg');
   background-size: cover;
   background-position: bottom;
   transition: 0.4s;
 }
-#app.warm {
+#appp.warm {
   background-image: url('../assets/warm-bg.jpg');
 }
-#app main {
+#appp main {
   min-height: 100vh;
   padding: 25px;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
@@ -211,5 +211,16 @@ body {
 }
 .sunset {
   margin-left: 20px;
+}
+.my_list {
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+  border: 2px solid #3f6679;
+  border-radius: 10px;
+  text-shadow: 3px 6px rgb(0 0 0 / 25%);
 }
 </style>
